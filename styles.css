@@ -24,7 +24,7 @@ p {
 
 /* 代碼塊樣式 */
 pre {
-    width: 80%; /* 或者使用像素值，例如 600px */    
+    max-width: 800px; /* 根據需求調整 */
     margin: auto;
     background-color: #282c34; /* 深背景色，以增強可讀性 */
     color: #abb2bf; /* 淺字體顏色，增強對比 */
