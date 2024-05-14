@@ -13,7 +13,7 @@
 
     <!-- step 1 -->
     <h2>1. Import the Required Libraries</h2>
-    <p><strong>You should import Pandas and Matplotlib for data manipulation and visualization.</strong></p>
+    <p><strong>Import Pandas and Matplotlib for data manipulation and visualization.</strong></p>
     <pre><code class = "language-python">
         import pandas as pd
         import matplotlib.pyplot as plt
@@ -61,7 +61,7 @@
     <pre><code class = "language-python">
         df['Age'].fillna(df['Age'].median(), inplace = True)
             </code></pre>
-    <p>.fillna: Fill NA/NaN values using the specified method.</p>
+    <p><i>.fillna</i>: Fill NA/NaN values using the specified method.</p>
     <p>The line of code fills in missing age values with the median of the age values and allows to modify 
         the DataFrame directly on the original variable without needing to assign the result back to the 
         DataFrame.
