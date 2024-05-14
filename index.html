@@ -11,9 +11,7 @@
 
 <!-- step 1 -->
 <h3>1. Import the Required Libraries</h3>
-<p>You should import Pandas (import pandas as pd) and Matplotlib (import matplotlib.pyplot as plt) 
-    for data manipulation and visualization.
-</p>
+<p><b>You should import Pandas and Matplotlib for data manipulation and visualization.</b></p>
 <pre><code class = "python">
     import pandas as pd
     import matplotlib.pyplot as plt
@@ -26,7 +24,7 @@
 
 <!-- step 2 -->
 <h3>2. Load the Dataset</h3>
-<p>Load the Titanic dataset from a CSV file named “titanic.csv” into a Pandas DataFrame.</p>
+<p><b>Load the Titanic dataset from a CSV file named “titanic.csv” into a Pandas DataFrame.</b></p>
 <pre><code class = "python">
     df = pd.read_csv("/Users/mooon/Desktop/mon_python/titanic.csv")
         </code></pre>
@@ -34,30 +32,29 @@
 
 <!-- step 3 -->
 <h3>3. Data Exploration</h3>
-<p>Display the first few rows of the dataset to understand its structure.</p>
+<p><b>Display the first few rows of the dataset to understand its structure.</b></p>
 <pre><code class = "python">
     df.head()
         </code></pre>
 <p>Return the first n (int, default 5) rows. This function returns the first n rows for the object 
     based on position. It is useful for quickly testing if your object has the right type of data in it. 
 </p>
-<p>Print information about the columns and their data types.</p>
+<p><b>Print information about the columns and their data types.</b></p>
 <pre><code class = "python">
     df.info()
         </code></pre>
-<p>Print a concise summary of a DataFrame. This method prints information about a DataFrame including 
-    the index dtype and columns, non-null values and memory usage. Show summary statistics for numerical 
-    columns (e.g., mean, min, max, etc.).
-</p>
+<p>This method prints information about a DataFrame including the index dtype and columns, non-null values and memory usage.</p>
+<p><b>Show summary statistics for numerical columns (e.g., mean, min, max, etc.).</b></p>
 <pre><code class = "python">
     df.describe()
         </code></pre>    
 <p>Generate descriptive statistics. Descriptive statistics include those that summarize the central 
     tendency, dispersion and shape of a dataset’s distribution, excluding NaN values.
 </p>
+
 <!-- step 4 -->
 <h3>4. Data Cleaning</h3>
-<p>Identify and handle missing values in the dataset (e.g., fill missing age values with median).</p>
+<p><b>Identify and handle missing values in the dataset (e.g., fill missing age values with median).</b></p>
 <pre><code class = "python">
     df['Age'].fillna(df['Age'].median(), inplace = True)
         </code></pre>
@@ -66,9 +63,36 @@
     the DataFrame directly on the original variable without needing to assign the result back to the 
     DataFrame.
 </p>
+<p><b>Perform any necessary data transformations or cleaning steps.</b></p>
+<pre><code class = "python">
+    df.drop('Cabin', axis = 1, inplace = True)
+        </code></pre>
+<p>The percentage of missing values is high, and it becomes challenging to use the column effectively in the analysis without introducing bias or errors through data imputation. The 'Cabin' column contains categorical (non-numeric) data, represented as strings in Python (hence the data type 'object'). Imputing missing values in categorical data can be more complex than with numerical data.</p>
+
 <!-- step 5 -->
 <h3>5. Data Analysis</h3>
-<p>This is a paragraph.</p>
+<p>Calculate and display the count of passengers by gender.</p>
+<pre><code class = "python">
+    df[["Sex", "PassengerId"]].groupby(["Sex"]).count()
+        </code></pre>
+<p>Select two columns from the DataFrame, 'Sex', which likely contains gender information (e.g., male or female), and 'PassengerId', which likely contains a unique identifier for each passenger. Groups the DataFrame by the 'Sex' column. All entries with the same sex are grouped together. This aggregation function is applied to each gender group, counting the number of entries in each group. Moreover, 'PassengerId' is unique for each passenger, this counts the number of passengers of each gender.
+</p>
+
+<p>Compute the average age of passengers.</p>
+<pre><code class = "python">
+    df["Age"].mean()
+        </code></pre>
+<p>Select the 'Age' column from the DataFrame and calculate the average age of all entries in the 'Age' column that are not missing (NaN values are automatically excluded from this calculation).
+</p>
+<p>Determine the survival rate by passenger class.</p>
+<pre><code class = "python">
+    survival_rates = df.groupby('Pclass')['Survived'].mean()
+        </code></pre>
+<p>This method returns a Pandas Series.
+Group the DataFrame by the column 'Pclass', which represents the passenger class (1, 2,  3). Each unique value in 'Pclass' forms a group. After grouping, this selects the 'Survived' column from each group. 'Survived' typically contains binary values: 1 for survived and 0 for did not survive. Calculate the mean of the 'Survived' column for each group. Because 'Survived' is binary, the mean here represents the proportion of survivors within each passenger class.
+•	The index of the Series is 'Pclass', which makes it straightforward to use as the x-values in a plot.
+•	The values of the Series are the survival rates, which are used as the y-values in the plot.
+</p>
 
 <!-- step 6 -->
 <h3>6. Data Visualization</h3>
