@@ -1,0 +1,38 @@
+/* 基本的 HTML 元素樣式 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+h1, h3 {
+    color: #333;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* 代碼塊樣式 */
+pre {
+    background-color: #282c34; /* 深背景色，以增強可讀性 */
+    color: #abb2bf; /* 淺字體顏色，增強對比 */
+    padding: 20px; /* 內邊距 */
+    overflow-x: auto; /* 橫向滾動條 */
+    border-radius: 5px; /* 圓角 */
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', monospace; /* 等寬字體提高代碼可讀性 */
+    font-size: 0.95em;
+}
+
+/* 代碼內的關鍵字、注釋和字符串的高亮 */
+code.python {
+    color: #abb2bf;
+}
+
+code.python .keyword { color: #c678dd; } /* Python 關鍵字，如 import, def */
+code.python .string { color: #98c379; } /* 字符串文字 */
+code.python .comment { color: #5c6370; } /* 註解 */
