@@ -24,17 +24,22 @@ p {
 
 /* 代碼塊樣式 */
 pre {
+    
     max-width: 800px; /* 根據需求調整 */
     height: auto;
-    margin: auto;
+    margin: 20px auto;
     background-color: #282c34; /* 深背景色，以增強可讀性 */
     color: #abb2bf; /* 淺字體顏色，增強對比 */
-    padding: 0px; /* 內邊距 */
+    padding: 10px; /* 內邊距 */
     overflow-x: auto; /* 橫向滾動條 */
     border-radius: 5px; /* 圓角 */
+    overflow-x: auto;
+    overflow-y: auto;
+    line-height: 1.5;
 }
 
 code {
+    line-height: 1.5;
     font-family: 'Consolas', 'Monaco', monospace; /* 等寬字體提高代碼可讀性 */
     font-size: 1.0em;
 }
