@@ -25,7 +25,7 @@ p {
 /* 代碼塊樣式 */
 pre {
     max-width: 800px; /* 根據需求調整 */
-    max-height: fit-content;
+    height: auto;
     margin: auto;
     background-color: #282c34; /* 深背景色，以增強可讀性 */
     color: #abb2bf; /* 淺字體顏色，增強對比 */
