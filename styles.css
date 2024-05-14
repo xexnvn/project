@@ -29,7 +29,7 @@ pre {
     margin: auto;
     background-color: #282c34; /* 深背景色，以增強可讀性 */
     color: #abb2bf; /* 淺字體顏色，增強對比 */
-    padding: 5px; /* 內邊距 */
+    padding: 0px; /* 內邊距 */
     overflow-x: auto; /* 橫向滾動條 */
     border-radius: 5px; /* 圓角 */
 }
