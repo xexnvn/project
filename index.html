@@ -10,7 +10,7 @@
 <h1>Exploring Titanic Dataset with Pandas</h1>
 
 <!-- step 1 -->
-<h3>1. Import the Required Libraries</h3>
+<h2>1. Import the Required Libraries</h2>
 <p><b>You should import Pandas and Matplotlib for data manipulation and visualization.</b></p>
 <pre><code class = "python">
     import pandas as pd
@@ -23,7 +23,7 @@
 </p>
 
 <!-- step 2 -->
-<h3>2. Load the Dataset</h3>
+<h2>2. Load the Dataset</h2>
 <p><b>Load the Titanic dataset from a CSV file named “titanic.csv” into a Pandas DataFrame.</b></p>
 <pre><code class = "python">
     df = pd.read_csv("/Users/mooon/Desktop/mon_python/titanic.csv")
@@ -31,7 +31,7 @@
 <p>Tells Python to load the CSV file located at the path into a DataFrame named df.</p>
 
 <!-- step 3 -->
-<h3>3. Data Exploration</h3>
+<h2>3. Data Exploration</h2>
 <p><b>Display the first few rows of the dataset to understand its structure.</b></p>
 <pre><code class = "python">
     df.head()
@@ -53,7 +53,7 @@
 </p>
 
 <!-- step 4 -->
-<h3>4. Data Cleaning</h3>
+<h2>4. Data Cleaning</h2>
 <p><b>Identify and handle missing values in the dataset (e.g., fill missing age values with median).</b></p>
 <pre><code class = "python">
     df['Age'].fillna(df['Age'].median(), inplace = True)
@@ -70,7 +70,7 @@
 <p>The percentage of missing values is high, and it becomes challenging to use the column effectively in the analysis without introducing bias or errors through data imputation. The 'Cabin' column contains categorical (non-numeric) data, represented as strings in Python (hence the data type 'object'). Imputing missing values in categorical data can be more complex than with numerical data.</p>
 
 <!-- step 5 -->
-<h3>5. Data Analysis</h3>
+<h2>5. Data Analysis</h2>
 <p>Calculate and display the count of passengers by gender.</p>
 <pre><code class = "python">
     df[["Sex", "PassengerId"]].groupby(["Sex"]).count()
@@ -98,7 +98,7 @@ Calculate the mean of the 'Survived' column for each group. Because 'Survived' i
 </p>
 
 <!-- step 6 -->
-<h3>6. Data Visualization</h3>
+<h2>6. Data Visualization</h2>
 <p><b>Create a bar chart to visualize the survival rate by passenger class.</b></p>
 <p><b>Add appropriate labels and a title to the chart.</b></p>
 <pre><code class = "python">
@@ -111,7 +111,7 @@ Calculate the mean of the 'Survived' column for each group. Because 'Survived' i
         </code></pre>
 
 <!-- step 7 -->
-<h3>7. Conclusion</h3>
+<h2>7. Conclusion</h2>
 <p><b>Summarize your findings or insights gained from analyzing the Titanic dataset.</b></p>
 <p>According to the data analysis, we can observe that first-class passengers had a higher survival rate. Also, the dataset required cleaning for missing age values, which impacted the analysis results.</p>
 <p><b>Reflect on the importance of data cleaning and exploration in data analysis.</b></p>
