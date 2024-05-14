@@ -26,14 +26,13 @@ p {
 pre {
     max-width: 800px;
     margin: auto;
-    background-color: #282c34; /* 深背景色 */
-    color: #abb2bf; /* 淺字體顏色 */
+    background-color: #282c34 !important;  /* 確保使用你的背景色 */
+    color: #abb2bf !important;             /* 確保文字顏色符合設定 */
     padding: 10px;
     overflow-x: auto;
-    border: none; /* 移除邊框 */
+    border: none !important;               /* 確保移除邊框 */
     border-radius: 5px;
 }
-
 
 code {
     background-color: inherit; /* 繼承父元素的背景色 */
@@ -42,7 +41,7 @@ code {
     font-size: 1.0em;
     line-height: 1.5;
     padding: 0; /* 移除額外的內邊距 */
-    border: none; /* 確保沒有邊框 */
+    border: inherit; /* 確保沒有邊框 */
 }
 
 /* 代碼內的關鍵字、注釋和字符串的高亮 */
