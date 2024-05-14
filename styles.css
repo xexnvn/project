@@ -32,6 +32,7 @@ pre {
     color: #abb2bf; /* 淺字體顏色，增強對比 */
     padding: 10px; /* 內邊距 */
     overflow-x: auto; /* 橫向滾動條 */
+    border: none;
     border-radius: 5px; /* 圓角 */
     overflow-x: auto;
     overflow-y: auto;
@@ -39,9 +40,13 @@ pre {
 }
 
 code {
-    line-height: 1.5;
-    font-family: 'Consolas', 'Monaco', monospace; /* 等寬字體提高代碼可讀性 */
+    background-color: inherit; /* 繼承父元素的背景色 */
+    color: inherit; /* 繼承父元素的文字色 */
+    font-family: 'Consolas', 'Monaco', monospace; /* 保持等寬字體 */
     font-size: 1.0em;
+    line-height: 1.5;
+    padding: 0; /* 移除額外的內邊距 */
+    border: none; /* 確保沒有邊框 */
 }
 
 /* 代碼內的關鍵字、注釋和字符串的高亮 */
