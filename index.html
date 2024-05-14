@@ -9,19 +9,40 @@
 <h1>Exploring Titanic Dataset with Pandas</h1>
     
 <h3>1. Import the Required Libraries</h3>
-<p>You should import Pandas (import pandas as pd) and Matplotlib (import matplotlib.pyplot as plt) for data manipulation and visualization.</p>
+<p>You should import Pandas (import pandas as pd) and Matplotlib <br>
+(import matplotlib.pyplot as plt) for data manipulation and visualization.</p>
 <pre><code class = "python">
     import pandas as pd
     import matplotlib.pyplot as plt
         </code></pre>
-<p>Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python.</p>
-<p>Matplotlib.pyplot is a state-based interface to matplotlib. It provides an implicit, MATLAB-like, way of plotting. It also opens figures on your screen, and acts as the figure GUI manager.</p>
+<p>Matplotlib is a comprehensive library for creating static, animated, <br>
+and interactive visualizations in Python. Matplotlib.pyplot is a state-based <br>
+interface to matplotlib. It provides an implicit, MATLAB-like, way of plotting. <br>
+It also opens figures on your screen, and acts as the figure GUI manager.</p>
 
 <h3>2. Load the Dataset</h3>
-<p>This is a paragraph.</p>
+<p>Load the Titanic dataset from a CSV file named “titanic.csv” into a Pandas DataFrame.</p>
+<pre><code class = "python">
+    df = pd.read_csv("/Users/mooon/Desktop/mon_python/titanic.csv")
+        </code></pre>
+<p>Tells Python to load the CSV file located at the path into a DataFrame named df.</p>
+
 
 <h3>3. Data Exploration</h3>
-<p>This is a paragraph.</p>
+<p>Display the first few rows of the dataset to understand its structure.</p>
+<pre><code class = "python">df.head()</code></pre>
+<p>Return the first n (int, default 5) rows.<br>
+This function returns the first n rows for the object based on position. <br>
+It is useful for quickly testing if your object has the right type of data in it.</p>    
+<p>Print information about the columns and their data types.</p>
+<pre><code class = "python">df.info()</code></pre>
+<p>Print a concise summary of a DataFrame. This method prints information about <br>
+a DataFrame including the index dtype and columns, non-null values and memory usage. <br>
+Show summary statistics for numerical columns (e.g., mean, min, max, etc.).
+<pre><code class = "python">df.describe()</code></pre>    
+Generate descriptive statistics. Descriptive statistics include those that summarize the <br>
+central tendency, dispersion and shape of a dataset’s distribution, excluding NaN values.
+</p>
 
 <h3>4. Data Cleaning</h3>
 <p>This is a paragraph.</p>
