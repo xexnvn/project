@@ -1,7 +1,7 @@
 /* 基本的 HTML 元素樣式 */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: Times New Roman, sans-serif;
+    line-height: 2.0;
     margin: 20px;
     background-color: #f9f9f9;
 }
@@ -16,7 +16,7 @@ h3 {
 }
 
 p {
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 /* 代碼塊樣式 */
@@ -30,7 +30,7 @@ pre {
 
 code {
     font-family: 'Consolas', 'Monaco', monospace; /* 等寬字體提高代碼可讀性 */
-    font-size: 0.95em;
+    font-size: 1.2em;
 }
 
 /* 代碼內的關鍵字、注釋和字符串的高亮 */
