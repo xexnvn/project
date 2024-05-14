@@ -24,20 +24,15 @@ p {
 
 /* 代碼塊樣式 */
 pre {
-    
-    max-width: 800px; /* 根據需求調整 */
-    height: auto;
-    margin: 20px auto;
-    background-color: #282c34; /* 深背景色，以增強可讀性 */
-    color: #abb2bf; /* 淺字體顏色，增強對比 */
-    padding: 10px; /* 內邊距 */
-    overflow-x: auto; /* 橫向滾動條 */
-    border: none;
-    border-radius: 5px; /* 圓角 */
+    max-width: 800px;
+    margin: auto;
+    background-color: #282c34; /* 深背景色 */
+    color: #abb2bf; /* 淺字體顏色 */
+    padding: 10px;
     overflow-x: auto;
-    overflow-y: auto;
-    line-height: 1.5;
+    border: none; /* 移除邊框 */
 }
+
 
 code {
     background-color: inherit; /* 繼承父元素的背景色 */
