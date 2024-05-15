@@ -9,7 +9,7 @@ table-of-contents {
     z-index: 1000;    /* 確保目錄在其他內容之上 */
     padding: 10px;     /* 增加內部空間 */
     border-right: 1px solid #ccc; /* 添加右邊框來區分內容區 */
-}Update
+}
 
 body {
     font-family: Times New Roman, serif;
