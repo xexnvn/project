@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel = "stylesheet" type = "text/css" href = "styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <title>Exploring Titanic Dataset with Pandas</title>
@@ -29,7 +29,7 @@
     <!-- step 1 -->
     <h2 id="import-libraries">1. Import the Required Libraries</h2>
     <p><strong>Import Pandas and Matplotlib for data manipulation and visualization.</strong></p>
-    <pre><code class = "language-python">
+    <pre><code class="language-python">
         import pandas as pd
         import matplotlib.pyplot as plt
             </code></pre>
@@ -42,7 +42,7 @@
     <!-- step 2 -->
     <h2 id="load-dataset">2. Load the Dataset</h2>
     <p><strong>Load the Titanic dataset from a CSV file named “titanic.csv” into a Pandas DataFrame.</strong></p>
-    <pre><code class = "language-python">
+    <pre><code class="language-python">
         path = "/Users/mooon/Desktop/mon_python/titanic.csv"
         df = pd.read_csv(path)
             </code></pre>
@@ -51,19 +51,19 @@
     <!-- step 3 -->
     <h2 id="data-exploration">3. Data Exploration</h2>
     <p><strong>Display the first few rows of the dataset to understand its structure.</strong></p>
-    <pre><code class = "language-python">
+    <pre><code class="language-python">
         df.head()
             </code></pre>
     <p>Return the first <i>n</i> (int, default 5) rows. This function returns the first <i>n</i> rows for the object 
         based on position. It is useful for quickly testing if your object has the right type of data in it. 
     </p>
     <p><strong>Print information about the columns and their data types.</strong></p>
-    <pre><code class = "language-python">
+    <pre><code class="language-python">
         df.info()
             </code></pre>
     <p>This method prints information about a DataFrame including the index dtype and columns, non-null values and memory usage.</p>
     <p><strong>Show summary statistics for numerical columns (e.g., mean, min, max, etc.).</strong></p>
-    <pre><code class = "language-python">
+    <pre><code class="language-python">
         df.describe()
             </code></pre>    
     <p>Generate descriptive statistics. Descriptive statistics include those that summarize the central 
@@ -73,7 +73,7 @@
     <!-- step 4 -->
     <h2 id="data-cleaning">4. Data Cleaning</h2>
     <p><strong>Identify and handle missing values in the dataset (e.g., fill missing age values with median).</strong></p>
-    <pre><code class = "language-python">
+    <pre><code class="language-python">
         df["Age"].fillna(df["Age"].median(), inplace = True)
             </code></pre>
     <p><i>.fillna</i>: Fill NA/NaN values using the specified method.</p>
@@ -82,7 +82,7 @@
         DataFrame.
     </p>
     <p><strong>Perform any necessary data transformations or cleaning steps.</strong></p>
-    <pre><code class = "language-python">
+    <pre><code class="language-python">
         df.drop("Cabin", axis = 1, inplace = True)
             </code></pre>
     <p>The percentage of missing values is high, and it becomes challenging to use the column effectively in the analysis without introducing bias or errors through data imputation. The "Cabin" column contains categorical (non-numeric) data, represented as strings in Python (hence the data type "object"). Imputing missing values in categorical data can be more complex than with numerical data.</p>
@@ -90,20 +90,20 @@
     <!-- step 5 -->
     <h2 id="data-analysis">5. Data Analysis</h2>
     <p>Calculate and display the count of passengers by gender.</p>
-    <pre><code class = "language-python">
+    <pre><code class="language-python">
         df[["Sex", "PassengerId"]].groupby(["Sex"]).count()
             </code></pre>
     <p>Select two columns from the DataFrame, "Sex", which likely contains gender information (e.g., male or female), and "PassengerId", which likely contains a unique identifier for each passenger. Groups the DataFrame by the "Sex" column. All entries with the same sex are grouped together. This aggregation function is applied to each gender group, counting the number of entries in each group. Moreover, "PassengerId" is unique for each passenger, this counts the number of passengers of each gender.
     </p>
 
     <p>Compute the average age of passengers.</p>
-    <pre><code class = "language-python">
+    <pre><code class="language-python">
         df["Age"].mean()
             </code></pre>
     <p>Select the "Age" column from the DataFrame and calculate the average age of all entries in the "Age" column that are not missing (NaN values are automatically excluded from this calculation).
     </p>
     <p>Determine the survival rate by passenger class.</p>
-    <pre><code class = "language-python">
+    <pre><code class="language-python">
         survival_rates = df.groupby("Pclass")["Survived"].mean()
             </code></pre>
     <p>This method returns a Pandas Series.<br>
@@ -120,7 +120,7 @@
     <h2 id="data-visualization">6. Data Visualization</h2>
     <p><strong>Create a bar chart to visualize the survival rate by passenger class.</strong></p>
     <p><strong>Add appropriate labels and a title to the chart.</strong></p>
-    <pre><code class = "language-python">
+    <pre><code class="language-python">
         plt.bar(survival_rates.index, survival_rates.values)
         plt.xlabel("Passenger Class")
         plt.ylabel("Survival Rate")
@@ -141,8 +141,8 @@
         document.addEventListener("DOMContentLoaded", (event) => {
             hljs.highlightAll();
             document.getElementById('toggle-toc').addEventListener('click', function() {
-                var toc = document.getElementById('table-of-contents');
-                toc.style.display = (toc.style.display === 'none' ? 'block' : 'none');
+                var toc=document.getElementById('table-of-contents');
+                toc.style.display=(toc.style.display === 'none' ? 'block' : 'none');
             });
         });
     </script>
