@@ -89,20 +89,20 @@
 
     <!-- step 5 -->
     <h2 id="data-analysis">5. Data Analysis</h2>
-    <p>Calculate and display the count of passengers by gender.</p>
+    <p><strong>Calculate and display the count of passengers by gender.</strong></p>
     <pre><code class="language-python">
         df[["Sex", "PassengerId"]].groupby(["Sex"]).count()
             </code></pre>
     <p>Select two columns from the DataFrame, "Sex", which likely contains gender information (e.g., male or female), and "PassengerId", which likely contains a unique identifier for each passenger. Groups the DataFrame by the "Sex" column. All entries with the same sex are grouped together. This aggregation function is applied to each gender group, counting the number of entries in each group. Moreover, "PassengerId" is unique for each passenger, this counts the number of passengers of each gender.
     </p>
 
-    <p>Compute the average age of passengers.</p>
+    <p><strong>Compute the average age of passengers.</strong></p>
     <pre><code class="language-python">
         df["Age"].mean()
             </code></pre>
     <p>Select the "Age" column from the DataFrame and calculate the average age of all entries in the "Age" column that are not missing (NaN values are automatically excluded from this calculation).
     </p>
-    <p>Determine the survival rate by passenger class.</p>
+    <p><strong>Determine the survival rate by passenger class.</strong></p>
     <pre><code class="language-python">
         survival_rates = df.groupby("Pclass")["Survived"].mean()
             </code></pre>
