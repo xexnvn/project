@@ -2,7 +2,7 @@ table-of-contents {
     position: fixed;   /* 固定位置 */
     top: 0;            /* 從視窗的最上方開始 */
     left: 0;           /* 從視窗的最左側開始 */
-    width: 200px;      /* 設定目錄的寬度 */
+    width: 200%;      /* 設定目錄的寬度 */
     height: 100vh;      /* 設定目錄的高度，讓它充滿整個視窗的高度 */
     overflow-y: auto;  /* 如果內容過多，允許垂直滾動 */
     background-color: #f4f4f4;  /* 背景色，增加可讀性 */
