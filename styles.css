@@ -40,7 +40,7 @@ code {
     font-family: 'Consolas', 'Monaco', monospace; /* 保持等寬字體 */
     font-size: 1.0em;
     line-height: 1.5;
-    padding: 0; /* 移除額外的內邊距 */
+    padding: 10px; /* 移除額外的內邊距 */
     border: inherit; /* 確保沒有邊框 */
 }
 
