@@ -7,8 +7,10 @@
     <title>Exploring Titanic Dataset with Pandas</title>
 </head>
 <body>
+    <button id="toggle-toc">Toggle Table of Contents</button>
+
     <!-- Table of Contents -->
-    <nav id="table-of-contents">
+    <nav id="table-of-contents" style="display: block;">
         <h2>Contents</h2>
         <ul>
             <li><a href="#import-libraries">Import Required Libraries</a></li>
@@ -139,6 +141,11 @@
         document.addEventListener("DOMContentLoaded", (event) => {
             hljs.highlightAll();
         });
+        document.getElementById('toggle-toc').addEventListener('click', function() {
+            var toc = document.getElementById('table-of-contents');
+            toc.style.display = (toc.style.display === 'none' ? 'block' : 'none');
+        });
     </script>
+
 </body>
 </html>
